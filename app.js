@@ -76,3 +76,37 @@ console.log(var1);
 var num1;
 //INITIALIZING AND OR ASSIGNING
 num1 = 1;
+
+//FUNCTIONS, they return typeof function
+//Think of functions as instructions of code to run, they contain logic you want to be ran
+
+//This defines a function, this one is a function declaration
+function calc(){
+    console.log('Inside the function');
+}
+calc();//This calls the function
+
+//This is a function expression, its a function that is assigned to a variable
+var doMore = function(){
+    console.log('Hello world')
+};
+doMore();//gets called the same way
+
+//You can assign functions to variables, and call the variable like you would the initial function
+
+var moreCalc = calc;
+moreCalc();
+//Functions are made to do some job or calculation and return a value as such
+function logSomething(){
+    return 'Hello World';
+}
+console.log(logSomething());
+//Now that this function returns something we can assign the result of the function to another variable
+var hello = logSomething();
+console.log(hello);
+//num1 and num2 are called parameters of a function
+function calcAdd(num1,num2){
+    return num1 + num2;
+}
+//The values supplied to the function call are call arguements
+calcAdd(2,3); //5
